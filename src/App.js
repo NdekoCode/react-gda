@@ -2,8 +2,8 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import List from "./components/List";
-import "./App.css";
-import "./index.css";
+import "./assets/css/App.css";
+import "./assets/css/index.css";
 function App() {
   return (
     <div className="app">
