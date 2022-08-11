@@ -1,4 +1,5 @@
 import React from "react";
+
 import profile from "../assets/images/profile.png";
 import mail from "../assets/images/icons/Mail.svg";
 import linkedin from "../assets/images/icons/linkedin.svg";

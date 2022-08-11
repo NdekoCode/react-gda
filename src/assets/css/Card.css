@@ -65,7 +65,7 @@ a {
   background-color: #1a1b21;
 }
 .block-content .card__body p {
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 10px;
 }
 .block-content .card__title {
@@ -103,8 +103,9 @@ a {
 .card__infos small {
   font-size: 12px;
 }
-.card-img {
+.card__img {
   max-width: 315px;
+  height: 315px;
 }
 .card__img img {
   display: block;
