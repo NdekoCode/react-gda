@@ -1,0 +1,17 @@
+.container {
+  min-width: 960px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.block-content {
+  min-height: 800px;
+  max-width: 550px;
+  width: 100%;
+  background-color: #23252c;
+}
+.block-content .card {
+  margin: 55px 65px;
+}
