@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import ring from "../assets/audios/ring.wav";
 
+import { TimerCountControl } from "./TimerCountControl";
 export function accurateInterval(fn, time) {
   var cancel, nextAt, timeout, wrapper;
   nextAt = new Date().getTime() + time;
@@ -166,6 +168,49 @@ export class Timer extends Component {
     return (
       <div>
         <div className="main-title">Pomodoro App</div>
+
+        <TimerCountControl
+          addID="break-increment"
+          length={this.state.brkLength}
+          lengthID="break-length"
+          minID="break-decrement"
+          onClick={this.setBrkLength}
+          title="Break Length"
+          titleID="break-label"
+        />
+        <TimerCountControl
+          addID="session-increment"
+          length={this.state.seshLength}
+          lengthID="session-length"
+          minID="session-decrement"
+          onClick={this.setSeshLength}
+          title="Session Length"
+          titleID="session-label"
+        />
+        <div className="timer" style={this.state.alarmColor}>
+          <div className="timer-wrapper">
+            <div id="timer-label">{this.state.timerType}</div>
+            <div id="time-left">{this.clockify()}</div>
+          </div>
+        </div>
+        <div className="timer-control">
+          <button id="start_stop" onClick={this.timerControl}>
+            Button
+            <i className="fa fa-play fa-2x" />
+            <i className="fa fa-pause fa-2x" />
+          </button>
+          <button id="reset" onClick={this.reset}>
+            <i className="fa fa-refresh fa-2x" />
+          </button>
+        </div>
+        <audio
+          id="beep"
+          preload="auto"
+          ref={(audio) => {
+            this.audioBeep = audio;
+          }}
+          src={ring}
+        />
       </div>
     );
   }
