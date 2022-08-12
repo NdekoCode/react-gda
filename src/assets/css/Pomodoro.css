@@ -1,0 +1,13 @@
+.pomodoro-container {
+  background: #1e555c;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.pomodoro-container #container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
