@@ -23,7 +23,17 @@
 .pomodoro-container #container .length-control {
   width: 250px;
 }
-
+.m-1 {
+  margin: 0.25rem;
+}
+.pomodoro {
+  padding: 25px;
+  margin: 45px auto;
+  background-color: #091b1d;
+  border-radius: 45px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  font-weight: 900;
+}
 .pomodoro-container #container button {
   background: none;
   outline: none;
@@ -53,7 +63,10 @@
   border-radius: 50%;
   position: relative;
 }
-
+#session-label,
+#break-label {
+  margin-bottom: 15px;
+}
 .pomodoro-container #container .timer .timer-wrapper {
   position: absolute;
   width: 190px;
