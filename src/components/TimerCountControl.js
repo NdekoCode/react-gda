@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import arrowUp from "../assets/images/icons/arrow-up.svg";
+import arrowDown from "../assets/images/icons/arrow-down.svg";
 export class TimerCountControl extends Component {
   render() {
     return (
@@ -10,7 +12,7 @@ export class TimerCountControl extends Component {
           onClick={this.props.onClick}
           value="-"
         >
-          <i className="fa fa-arrow-down fa-2x" />
+          <img src={arrowDown} alt="arrowDown" width={25} />
         </button>
         <div className="btn-level" id={this.props.lengthID}>
           {this.props.length}
@@ -21,7 +23,7 @@ export class TimerCountControl extends Component {
           onClick={this.props.onClick}
           value="+"
         >
-          <i className="fa fa-arrow-up fa-2x" />
+          <img src={arrowUp} alt="arrowUp" width={25} />
         </button>
       </div>
     );

@@ -1,8 +1,11 @@
 .pomodoro-container {
   background: #1e555c;
-  color: white;
+  color: #fff;
   font-size: 30px;
   text-align: center;
+}
+.pomodoro-container button {
+  color: #fff;
 }
 
 .pomodoro-container #container {
@@ -25,8 +28,11 @@
   background: none;
   outline: none;
   border: none;
-  color: white;
+  color: #fff;
   cursor: pointer;
+}
+.pomodoro-container #container button * {
+  color: inherit;
 }
 
 .pomodoro-container #container .btn-level,
@@ -40,11 +46,11 @@
 }
 
 .pomodoro-container #container .timer {
-  border: 7px solid #13353a;
+  border: 10px solid #1aaf58;
   margin: 20px auto 10px auto;
-  width: 270px;
-  height: 160px;
-  border-radius: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
   position: relative;
 }
 

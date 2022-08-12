@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import ring from "../assets/audios/ring.wav";
 
 import { TimerCountControl } from "./TimerCountControl";
+import ring from "../assets/audios/ring.wav";
+import refresh from "../assets/images/icons/refresh.svg";
+import pause from "../assets/images/icons/pause.svg";
+import play from "../assets/images/icons/play.svg";
+
 export function accurateInterval(fn, time) {
   var cancel, nextAt, timeout, wrapper;
   nextAt = new Date().getTime() + time;
@@ -19,7 +23,6 @@ export function accurateInterval(fn, time) {
     cancel: cancel,
   };
 }
-
 export class Timer extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +33,7 @@ export class Timer extends Component {
       timerType: "Session",
       timer: 1500,
       intervalID: "",
-      alarmColor: { color: "white" },
+      alarmColor: { color: "#fff" },
     };
     this.setBrkLength = this.setBrkLength.bind(this);
     this.setSeshLength = this.setSeshLength.bind(this);
@@ -126,7 +129,7 @@ export class Timer extends Component {
     if (_timer < 61) {
       this.setState({ alarmColor: { color: "#a50d0d" } });
     } else {
-      this.setState({ alarmColor: { color: "white" } });
+      this.setState({ alarmColor: { color: "#fff" } });
     }
   }
   buzzer(_timer) {
@@ -138,7 +141,7 @@ export class Timer extends Component {
     this.setState({
       timer: num,
       timerType: str,
-      alarmColor: { color: "white" },
+      alarmColor: { color: "#fff" },
     });
   }
   clockify() {
@@ -156,7 +159,7 @@ export class Timer extends Component {
       timerType: "Session",
       timer: 1500,
       intervalID: "",
-      alarmColor: { color: "white" },
+      alarmColor: { color: "#fff" },
     });
     if (this.state.intervalID) {
       this.state.intervalID.cancel();
@@ -168,7 +171,6 @@ export class Timer extends Component {
     return (
       <div>
         <div className="main-title">Pomodoro App</div>
-
         <TimerCountControl
           addID="break-increment"
           length={this.state.brkLength}
@@ -195,12 +197,11 @@ export class Timer extends Component {
         </div>
         <div className="timer-control">
           <button id="start_stop" onClick={this.timerControl}>
-            Button
-            <i className="fa fa-play fa-2x" />
-            <i className="fa fa-pause fa-2x" />
+            <img src={play} alt="Play" width={25} />
+            <img src={pause} alt="Pause" width={25} />
           </button>
           <button id="reset" onClick={this.reset}>
-            <i className="fa fa-refresh fa-2x" />
+            <img src={refresh} alt="Refresh" width={25} />
           </button>
         </div>
         <audio
