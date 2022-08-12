@@ -31,4 +31,12 @@ export class Timer extends Component {
       alarmColor: { color: "white" },
     };
   }
+
+  render() {
+    return (
+      <div>
+        <div className="main-title">Pomodoro App</div>
+      </div>
+    );
+  }
 }
