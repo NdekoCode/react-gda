@@ -169,7 +169,7 @@ export class Timer extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="pomodoro">
         <div className="main-title">Pomodoro App</div>
         <TimerCountControl
           addID="break-increment"
@@ -197,11 +197,11 @@ export class Timer extends Component {
         </div>
         <div className="timer-control">
           <button id="start_stop" onClick={this.timerControl}>
-            <img src={play} alt="Play" width={25} />
-            <img src={pause} alt="Pause" width={25} />
+            <img src={play} className="m-1" alt="Play" width={45} />
+            <img src={pause} className="m-1" alt="Pause" width={45} />
           </button>
           <button id="reset" onClick={this.reset}>
-            <img src={refresh} alt="Refresh" width={25} />
+            <img src={refresh} className="m-1" alt="Refresh" width={45} />
           </button>
         </div>
         <audio
