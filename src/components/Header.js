@@ -2,6 +2,7 @@ import React from "react";
 import Link from "./Link";
 import NavBar from "./NavBar";
 import logo from "../logo.svg";
+import { Routes, Route } from "react-router-dom";
 function Header() {
   const links = [
     {

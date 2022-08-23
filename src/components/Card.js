@@ -4,10 +4,10 @@ import "../assets/css/Card.css";
 import CardHeader from "./CardHeader";
 import CardFooter from "./CardFooter";
 import CardBody from "./CardBody";
-function Card() {
+function Card({ fullname }) {
   return (
     <article className="card">
-      <CardHeader />
+      <CardHeader fullname={fullname} />
       <CardBody />
       <CardFooter />
     </article>
