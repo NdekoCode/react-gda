@@ -18,3 +18,8 @@ body {
 .footer {
   margin-top: auto;
 }
+.services a {
+  color: blue;
+  text-decoration: underline;
+  margin: 5px;
+}

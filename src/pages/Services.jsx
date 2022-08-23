@@ -1,13 +1,15 @@
 import React from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import { Link, Outlet } from "react-router-dom";
 
 export function Services() {
   return (
-    <React.Fragment>
-      <Header />
-      <div className="container">Nos services</div>
-      <Footer />
-    </React.Fragment>
+    <div className="container">
+      <div className="services">
+        <h1>Nos services</h1>
+        <Link to="/services/development">Services de Developpement</Link>
+        <Link to="/services/marketing">Services de Marketing</Link>
+      </div>
+      <Outlet />
+    </div>
   );
 }
