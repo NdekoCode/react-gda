@@ -35,6 +35,7 @@ export class Timer extends Component {
       intervalID: "",
       alarmColor: { color: "#fff" },
     };
+
     this.setBrkLength = this.setBrkLength.bind(this);
     this.setSeshLength = this.setSeshLength.bind(this);
     this.lengthControl = this.lengthControl.bind(this);
@@ -149,6 +150,7 @@ export class Timer extends Component {
     let seconds = this.state.timer - minutes * 60;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     minutes = minutes < 10 ? "0" + minutes : minutes;
+    console.log(minutes + ":" + seconds);
     return minutes + ":" + seconds;
   }
   reset() {

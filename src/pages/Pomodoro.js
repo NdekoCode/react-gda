@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Timer } from "./Timer";
+import { Timer } from "../components/Timer";
 import "../assets/css/Pomodoro.css";
 
 export class Pomodoro extends Component {

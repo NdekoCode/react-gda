@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function Button({ linkDetail, item }) {
   const { classLink, name, href } = linkDetail;
   console.log(classLink, name, href);
   return (
     <React.Fragment>
       {item === "link" ? (
-        <a href={href} className={classLink}>
+        <Link to={href} className={classLink}>
           {name}
-        </a>
+        </Link>
       ) : (
         <button className={classLink}>{name}</button>
       )}

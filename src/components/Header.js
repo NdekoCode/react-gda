@@ -1,39 +1,46 @@
 import React from "react";
-import Link from "./Link";
 import NavBar from "./NavBar";
 import logo from "../logo.svg";
-function Header() {
+import { Link } from "react-router-dom";
+export function Header() {
   const links = [
     {
       classLink: "",
       name: "Home",
-      href: "#",
+      href: "/",
     },
     {
       classLink: "",
       name: "Services",
-      href: "#",
+      href: "/services",
     },
     {
       classLink: "",
-      name: "About",
-      href: "#",
+      name: "Blog",
+      href: "/blog",
+    },
+    {
+      classLink: "",
+      name: "Pomodoro",
+      href: "/pomodoro",
     },
     {
       classLink: "",
       name: "Contact",
-      href: "#",
+      href: "/contact",
     },
   ];
   return (
     <header className="header">
       <div className="container">
-        <a href="#" className="App-logo">
+        <Link to="#" className="App-logo">
           <img src={logo} alt="Logo" />
-        </a>
+        </Link>
         <NavBar className="navbar">
-          {links.map((link, index) => (
-            <Link key={index} linkDetail={link} />
+          {links.map(({ href, name }, index) => (
+            <Link key={index} to={href}>
+              {name}
+            </Link>
           ))}
         </NavBar>
       </div>
