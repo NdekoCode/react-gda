@@ -8,6 +8,7 @@ import "./assets/css/App.css";
 import "./assets/css/index.css";
 import GdaExos from "./pages/GdaExos";
 import { Pomodoro } from "./pages/Pomodoro";
+import Error from "./pages/Error";
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/blog/user/:fullname" element={<GdaExos />} />
         <Route path="/pomodoro" element={<Pomodoro />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </div>
   );

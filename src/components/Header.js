@@ -3,27 +3,28 @@ import Link from "./Link";
 import NavBar from "./NavBar";
 import logo from "../logo.svg";
 import { Routes, Route } from "react-router-dom";
+import Link from "react-router-dom";
 function Header() {
   const links = [
     {
       classLink: "",
       name: "Home",
-      href: "#",
+      href: "/",
     },
     {
       classLink: "",
       name: "Services",
-      href: "#",
+      href: "/services",
     },
     {
       classLink: "",
       name: "About",
-      href: "#",
+      href: "/about",
     },
     {
       classLink: "",
       name: "Contact",
-      href: "#",
+      href: "/contact",
     },
   ];
   return (
@@ -33,8 +34,10 @@ function Header() {
           <img src={logo} alt="Logo" />
         </a>
         <NavBar className="navbar">
-          {links.map((link, index) => (
-            <Link key={index} linkDetail={link} />
+          {links.map(({ href, name }, index) => (
+            <Link key={index} to={href}>
+              {name}
+            </Link>
           ))}
         </NavBar>
       </div>
