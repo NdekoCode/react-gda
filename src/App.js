@@ -13,6 +13,7 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blog/user/:fullname" element={<GdaExos />} />
         <Route path="/pomodoro" element={<Pomodoro />} />
       </Routes>
     </div>
