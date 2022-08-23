@@ -1,10 +1,8 @@
 import React from "react";
-import Link from "./Link";
 import NavBar from "./NavBar";
 import logo from "../logo.svg";
-import { Routes, Route } from "react-router-dom";
-import Link from "react-router-dom";
-function Header() {
+import { Link } from "react-router-dom";
+export function Header() {
   const links = [
     {
       classLink: "",
@@ -18,8 +16,13 @@ function Header() {
     },
     {
       classLink: "",
-      name: "About",
-      href: "/about",
+      name: "Blog",
+      href: "/blog",
+    },
+    {
+      classLink: "",
+      name: "Pomodoro",
+      href: "/pomodoro",
     },
     {
       classLink: "",
@@ -30,9 +33,9 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <a href="#" className="App-logo">
+        <Link to="#" className="App-logo">
           <img src={logo} alt="Logo" />
-        </a>
+        </Link>
         <NavBar className="navbar">
           {links.map(({ href, name }, index) => (
             <Link key={index} to={href}>

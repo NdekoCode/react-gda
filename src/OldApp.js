@@ -9,10 +9,6 @@ import "./assets/css/index.css";
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Card />} />
-      </Routes>
       <div className="app">
         <Header />
         <div className="container">

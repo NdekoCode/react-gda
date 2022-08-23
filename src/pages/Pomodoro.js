@@ -1,15 +1,21 @@
 import React, { Component } from "react";
 import { Timer } from "../components/Timer";
 import "../assets/css/Pomodoro.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export class Pomodoro extends Component {
   render() {
     return (
-      <div className="pomodoro-container ">
-        <div id="container">
-          <Timer />
+      <React.Fragment>
+        <Header />
+        <div className="pomodoro-container ">
+          <div id="container">
+            <Timer />
+          </div>
         </div>
-      </div>
+        <Footer />
+      </React.Fragment>
     );
   }
 }

@@ -5,12 +5,12 @@ function NavBar({ children, className }) {
     {
       classLink: "btn",
       name: "Login",
-      href: "#",
+      href: "/login",
     },
     {
       classLink: "btn",
       name: "Sign In",
-      href: "#",
+      href: "/signin",
     },
   ];
   return (
