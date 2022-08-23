@@ -149,6 +149,7 @@ export class Timer extends Component {
     let seconds = this.state.timer - minutes * 60;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     minutes = minutes < 10 ? "0" + minutes : minutes;
+    console.log(minutes + ":" + seconds);
     return minutes + ":" + seconds;
   }
   reset() {
