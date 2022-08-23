@@ -35,6 +35,7 @@ export class Timer extends Component {
       intervalID: "",
       alarmColor: { color: "#fff" },
     };
+
     this.setBrkLength = this.setBrkLength.bind(this);
     this.setSeshLength = this.setSeshLength.bind(this);
     this.lengthControl = this.lengthControl.bind(this);
