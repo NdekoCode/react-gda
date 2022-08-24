@@ -17,7 +17,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <div className="app mt-10">
+      <div className="app">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pomodoro" element={<Pomodoro />} />

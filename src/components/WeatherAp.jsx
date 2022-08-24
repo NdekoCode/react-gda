@@ -18,7 +18,7 @@ export function WeatherAp() {
       }
     });
     return (
-      <div className="min-h-screen flex items-center justify-center flex-wrap gap-2">
+      <div className="min-h-screen flex items-center justify-center flex-wrap gap-2 mb-10 weather_app">
         {newArrayOfMeteo.map((weatherData, index) => (
           <WeatherCard key={index} weatherData={weatherData} city={city} />
         ))}

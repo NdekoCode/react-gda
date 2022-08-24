@@ -3,9 +3,7 @@ import "../assets/css/index.css";
 import Card from "../components/Card";
 import { useParams } from "react-router-dom";
 function GdaExos() {
-  const params = useParams();
-  // console.log(params.fullname);
-  const { fullname } = params;
+  const { fullname } = useParams();
   console.log(fullname);
   return (
     <div className="container">

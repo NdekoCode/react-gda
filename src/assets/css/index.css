@@ -6,14 +6,19 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Inter", Arial, "Segoe UI", Roboto, Oxygen, Cantarell,
     "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
 }
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
+}
+.header {
+  background-color: white;
 }
 .footer {
   margin-top: auto;
@@ -26,4 +31,8 @@ body {
 .weather-item {
   min-width: 260px;
   min-height: 400px;
+  color: #333;
+}
+.weather_app {
+  padding-top: 4rem;
 }

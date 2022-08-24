@@ -4,8 +4,8 @@ export function WeatherCard({ city, weatherData }) {
   let maDate = new Date(dt_txt);
   maDate = maDate.toDateString();
   const { description } = weather[0];
-  const { temp, temp_max, feels_like } = main;
-  console.log(wind);
+  const { temp, temp_max, feels_like, humidity } = main;
+  console.log(main);
 
   return (
     <div className="flex flex-col bg-white rounded p-4 w-full max-w-xs  shadow-lg weather-item">
@@ -56,7 +56,7 @@ export function WeatherCard({ city, weatherData }) {
         </div>
         <div className="flex flex-col items-center">
           <div className="font-medium text-sm">Humidité</div>
-          <div className="text-sm text-gray-500">68%</div>
+          <div className="text-sm text-gray-500">{humidity}%</div>
         </div>
         <div className="flex flex-col items-center">
           <div className="font-medium text-sm">Visibilité</div>

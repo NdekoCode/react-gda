@@ -47,6 +47,7 @@ a {
   max-width: 550px;
   width: 100%;
   background-color: #23252c;
+  margin: 0 auto;
 }
 .block-content .card__header {
   border-top-left-radius: 10px;
@@ -106,6 +107,7 @@ a {
 .card__img {
   max-width: 315px;
   height: 315px;
+  overflow: hidden;
 }
 .card__img img {
   display: block;
