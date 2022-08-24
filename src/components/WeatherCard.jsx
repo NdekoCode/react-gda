@@ -5,7 +5,6 @@ export function WeatherCard({ city, weatherData }) {
   maDate = maDate.toDateString();
   const { description } = weather[0];
   const { temp, temp_max, feels_like, humidity } = main;
-  console.log(main);
 
   return (
     <div className="flex flex-col bg-white rounded p-4 w-full max-w-xs  shadow-lg weather-item">
