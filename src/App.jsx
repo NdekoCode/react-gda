@@ -12,15 +12,17 @@ import Error from "./pages/Error";
 import { Services } from "./pages/Services";
 import { ServicesDev } from "./components/ServicesDev";
 import { ServicesMark } from "./components/ServicesMark";
+import { WeatherAp } from "./components/WeatherAp";
 function App() {
   return (
     <React.Fragment>
       <Header />
-      <div className="app">
+      <div className="app mt-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pomodoro" element={<Pomodoro />} />
           <Route path="/blog" element={<GdaExos />} />
+          <Route path="/meteo" element={<WeatherAp />} />
           <Route path="/*" element={<Error />} />
           <Route path="/services" element={<Services />}>
             <Route path="/services/development" element={<ServicesDev />} />

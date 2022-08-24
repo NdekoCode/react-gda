@@ -16,6 +16,11 @@ export function Header() {
     },
     {
       classLink: "",
+      name: "Météo",
+      href: "/meteo",
+    },
+    {
+      classLink: "",
       name: "Blog",
       href: "/blog",
     },

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function useFetchData(url) {
   // J'initialise mon Etat avec les entités dont j'aurai besoin
