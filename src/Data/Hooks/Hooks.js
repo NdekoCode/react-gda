@@ -13,6 +13,8 @@ export function useFetchData(url) {
       const response = await fetch(url);
       // Je transforme les donner de JSON en objet Javascript
       const data = await response.json();
+
+      setState((st) => ({ ...st, loading: true }));
       //  Si la requete renvois un bon resultat, je recupère les donnés que j'ai met dans mmon etat
       if (response.ok) {
         setState({
@@ -24,7 +26,7 @@ export function useFetchData(url) {
         setState((st) => ({ ...st, loading: false }));
       }
     })();
-  }, []);
+  }, [url]);
 
   return [state.items, state.loading, setState];
 }
