@@ -26,5 +26,5 @@ export function useFetchData(url) {
     })();
   }, []);
 
-  return [state.items, state.loading];
+  return [state.items, state.loading, setState];
 }

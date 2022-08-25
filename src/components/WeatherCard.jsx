@@ -32,7 +32,7 @@ export function WeatherCard({ city, weatherData }) {
           <div>{description}</div>
           <div className="mt-1">
             <span className="text-sm">
-              <i className="far fa-long-arrow-up"></i>
+              <i className="fas fa-long-arrow-up"></i>
             </span>
             <span className="text-sm font-light text-gray-500">
               {temp_max}°C
@@ -40,7 +40,7 @@ export function WeatherCard({ city, weatherData }) {
           </div>
           <div>
             <span className="text-sm">
-              <i className="far fa-long-arrow-down"></i>
+              <i className="fas fa-long-arrow-down"></i>
             </span>
             <span className="text-sm font-light text-gray-500">
               {feels_like}°C
